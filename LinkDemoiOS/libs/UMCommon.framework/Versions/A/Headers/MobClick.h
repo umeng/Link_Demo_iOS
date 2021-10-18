@@ -7,8 +7,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@class CLLocation;
-@interface MobClick : NSObject 
+@interface MobClick : NSObject
 
 #pragma mark basics
 
@@ -157,11 +156,6 @@
  */
 + (void)setLatitude:(double)latitude longitude:(double)longitude;
 
-/** 设置经纬度信息
- @param location CLLocation 经纬度信息
- @return void
- */
-+ (void)setLocation:(CLLocation *)location;
 
 ///---------------------------------------------------------------------------------------
 /// @name Utility函数
@@ -214,6 +208,12 @@
  @param value 设置为YES, umeng SDK 会将自动采集页面信息
  */
 + (void)setAutoPageEnabled:(BOOL)value;
+
+/**
+ *集成测试。
+ */
++ (BOOL)handleUrl:(NSURL *)url;
+
 
 @end
 
